@@ -1,0 +1,51 @@
+<!doctype html><html lang="ru"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"/>
+<title>NadexRes</title><link rel="stylesheet" href="/static/css/style.css"/>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js"></script></head>
+<body>
+  <!-- Splash Screen Animation -->
+  <div id="splashScreen" class="splash-screen">
+    <div class="splash-content">
+      <div class="crypto-logo">
+        <div class="logo-circle">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <circle cx="50" cy="50" r="45" stroke="url(#gradient)" stroke-width="3" fill="none" class="circle-animated"/>
+            <text x="50" y="60" text-anchor="middle" font-size="40" font-weight="bold" fill="#8b5cf6">₿</text>
+          </svg>
+        </div>
+      </div>
+      <h1 class="splash-title">NadexRes</h1>
+      <p class="splash-subtitle">Crypto Trading Platform</p>
+      <div class="loader-dots">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="header">
+    <div class="brand">
+      <img src="/static/img/logo.png" onerror="this.style.display='none';document.getElementById('brandTitle').style.display='block'">
+      <span id="brandTitle" class="title" style="display:none" data-i18n="app.title">NadexRes</span>
+    </div>
+    <div class="actions">
+      <span class="badge">Mini App</span>
+      <button class="icon-btn" id="btnLang" title="Language / Язык">🌐</button>
+      <a class="icon-btn" href="#" title="Notifications">🔔</a>
+    </div>
+  </div>
+  <div id="root"></div>
+  <div class="navbar">
+    <div class="nav-item active assets" data-tab="assets" data-i18n="nav.assets">Активы</div>
+    <div class="nav-item trade" data-tab="trade" data-i18n="nav.trade">Торговля</div>
+    <div class="nav-item stats" data-tab="stats" data-i18n="nav.stats">Статистика</div>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="/static/js/app.js?t={{ cache_bust }}"></script>
+</body></html>
